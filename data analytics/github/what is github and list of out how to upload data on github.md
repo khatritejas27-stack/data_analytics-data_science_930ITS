@@ -25,4 +25,6 @@
 4.git remote add origin https://github.com/khatritejas27-stack/data_analytics-data_science_930ITS.git
 5.git push -u origin master 
 
- 
+ extelnal command
+ git ftech 
+ --force 
