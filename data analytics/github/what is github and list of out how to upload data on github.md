@@ -26,5 +26,5 @@
 5.git push -u origin master 
 
  extelnal command
- git ftech 
+ git fetch 
  --force 
