@@ -55,3 +55,6 @@
 
 
 ![alt text](image-2.png) 
+
+#install jupyter note book
+ pip install juyter notebook
