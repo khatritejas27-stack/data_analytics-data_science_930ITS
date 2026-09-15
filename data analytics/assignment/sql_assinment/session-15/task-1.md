@@ -1,0 +1,1 @@
+## Tasks 1:Install the sqlite3 module in Python and write a script to create a new database called foode.db with a table Restaurants (id, name, cuisine, rating).
