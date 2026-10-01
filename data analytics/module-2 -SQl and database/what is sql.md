@@ -397,7 +397,6 @@ select * from tbl_employee where empid=1
 
 ```
 
-
 ## SQL function
 1. SQL function is used as pre-define function
 2. type of function
@@ -619,14 +618,131 @@ cname varchar(255)
 create table tbl_users
 (
 uid int AUTO_INCREMENT primary key,
+cid int,
 uname varchar(255),
 age int,
 phone bigint,
 company varchar(255),
 address text,
-cid int REFERENCES tbl_country(cid)    
+constraint cid int REFERENCES tbl_country(cid)    
 )
+
+  
+CREATE table tbl_product(
+  proid int PRIMARY KEY AUTO_INCREMENT ,
+   subcatid INT,
+   prodct_name varchar(255),
+   description TEXT,
+    price DECIMAL(10,2) NOT NULL,
+    stock_quantity INT DEFAULT 0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN key(subcatid) REFERENCES tbl_subcatgory(subcatid)
+);
 ```
+
+**examples of foreign key**
+
+```
+create table tbl_category
+(
+catid int AUTO_INCREMENT primary key,
+catname varchar(255)    
+)
+or
+create table tbl_subcategory
+(
+subcatid int AUTO_INCREMENT primary key,
+catid  int,
+CONSTRAINT catid FOREIGN KEY (catid) REFERENCES tbl_category(catid),
+subcatname varchar(255)
+)
+or
+create table tbl_products
+(
+pid int AUTO_INCREMENT primary key,
+catid  int,
+CONSTRAINT catid FOREIGN KEY (catid) REFERENCES tbl_category(catid),
+subcatid  int,
+CONSTRAINT subcatid FOREIGN KEY (subcatid) REFERENCES tbl_subcategory(subcatid),  
+pname varchar(255),
+qty int, 
+price int,
+description text,
+photo varchar(255),
+created_at datetime        
+)
+or
+create table tbl_customer(
+custid int AUTO_INCREMENT primary key,
+name varchar(255),
+password varchar(255),
+phone bigint,
+address text
+)
+or
+create table tbl_cart
+(
+cartid int AUTO_INCREMENT primary key,
+catid  int,
+CONSTRAINT catid_key FOREIGN KEY (catid) REFERENCES tbl_category(catid),
+
+subcatid  int,
+CONSTRAINT subcatid FOREIGN KEY (subcatid) REFERENCES tbl_subcategory(subcatid),  
+
+pid  int,
+CONSTRAINT pid FOREIGN KEY (pid) REFERENCES tbl_products(pid), 
+
+custid  int,
+CONSTRAINT custid FOREIGN KEY (custid) REFERENCES tbl_customer(custid), 
+quantity int, 
+subtotal int,        
+created_at datetime        
+)
+
+```
+or
+```sql
+create table tbl_department
+(
+
+depid int AUTO_INCREMENT primary key,
+depname varchar(255)
+
+)
+
+or
+
+create table tbl_company
+(
+
+compid int AUTO_INCREMENT primary key,
+compname varchar(255)
+
+)
+
+or 
+
+create table tbl_salesman
+(
+
+salesid int AUTO_INCREMENT primary key,
+name varchar(255),
+age int,
+address text,
+mobile bigint,
+email varchar(255),
+depid int,
+CONSTRAINT depid foreign key(depid) REFERENCES tbl_department(depid),
+
+compid int,
+CONSTRAINT compid foreign key(compid) REFERENCES tbl_company(compid),
+
+create_at datetime
+
+)
+
+```
+
 ## case based primary key and foreign key queries and create tables 
 
 # Case 1: Student and Department
@@ -716,31 +832,254 @@ select distinct resturant from foodorder ;
 1. normlization is use to normlised table with pk|uk|fk\
 2. normlistion is removed the duplicate of data in table
 
-#
+# types of Normalization ?
+- 1NF
+- 2NF
+- 3NF
+- 4NF 
+- 5NF
 
-# what is SQL SQL key constraints ?
+**examples**
+
+**tbl_category**
+
+| catid     |  catname      |
+|-----------|---------------|
+|    1      |  Mens-clothes |
+|    2      |  Womens-clothes |
+|    3      |  electronics    | 
+
+**tbl_subcategory**
+
+| subcatid     |  catid        |  subcatname        |
+|-----------|-------------------|--------------------|
+|    1      |       1           |   mens-clothes     |
+|    2      |       1           |   mens-tie         |
+|    3      |       1           |   mens-shirt       |
+|    4      |       2           |   womens-shirt      |
+|    5      |       3           |   laptops           | 
+|    6      |       3           |   refrigerator      | 
+|    7      |       3           |   mobiles           | 
+
+
+**tbl_products**
+
+| pid | pname  | photo     |   qty     | desc   |  catid    | subcatid  |
+|-----|--------|-----------|-----------|--------|-----------|-----------|
+| 1   | opoo   |op.jpg     |   1       | good   |  3        |   7       |
+
+
+
+# what is SQL key constraints ?
 1. key constrain is used to set limits on table
 
 
 # what is SQL join  ?
 
+ 1. sql join are used to join more than one field with common filed
+ 2. sql join are used to join table date from one table to another table with common field
+  
+# type of JOIN ?
+1. join
+2. inner join
+3. outer join
+  1. left outer join
+  2. right outer join
+  3. full outer join
+4. croos join
+5. self join
+6. union join
+# join :
 
-# what is SQL Case In ?
+1. join are used to join more than one tables with common field 
+2. join are used to match data from one tables to another table if data matched join the tables otherwise return null values 
+
+**syntax**
+
+```
+select tbl1.*, columname from tbl1 join tbl2 on tbl1.commonfield=tbl2.commfield;
+or
+select tbl_salesman.*, depname from tbl_salesman join tbl_department on tbl_salesman.depid=tbl_department.depid;
+or
+
+select salesid, name, address , mobile,email , depname from tbl_salesman join tbl_department on tbl_salesman.depid=tbl_department.depid;
+``` 
+
+# inner join :
+
+1. iner join are used to join more than one tables with common field 
+2. inner join are used to match data from one tables to another table if data matched join the tables otherwise return null values 
+
+**syntax**
+
+```
+select tbl1.*, columname from tbl1 inner join tbl2 on tbl1.commonfield=tbl2.commfield;
+or
+select tbl_salesman.*, depname from tbl_salesman inner join tbl_department on tbl_salesman.depid=tbl_department.depid;
+or
+
+select salesid, name, address , mobile,email , depname from tbl_salesman inner join tbl_department on tbl_salesman.depid=tbl_department.depid;
+
+or
+select salesid, name, address , mobile,email , depname, compname from tbl_salesman inner join tbl_department on tbl_salesman.depid=tbl_department.depid inner join tbl_company on tbl_salesman.compid=tbl_company.compid;
+``` 
 
 
-# what is SQL windows function  ?
+# left join :
+
+1. left join are used to join more than one tables with common field 
+2. left join are used to join first table of left rows with second table of left rows if data matched from first table of left rows return all data of first table and join otherwise return null values.
+
+**syntax**
+
+```
+select tbl1.*, columname from tbl1 left join tbl2 on tbl1.commonfield=tbl2.commfield;
+or
+select tbl_salesman.*, depname from tbl_salesman left join tbl_department on tbl_salesman.depid=tbl_department.depid;
+or
+
+select salesid, name, address , mobile,email , depname from tbl_salesman left join tbl_department on tbl_salesman.depid=tbl_department.depid;
+
+or
+select salesid, name, address , mobile,email , depname, compname from tbl_salesman left join tbl_department on tbl_salesman.depid=tbl_department.depid left join tbl_company on tbl_salesman.compid=tbl_company.compid;
+
+``` 
+
+# right join :
+
+1. right join are used to join more than one tables with common field 
+2. right join are used to join second table of right rows with first table of right rows if data matched from second table of right rows return all data of second  table and join otherwise return null values.
+
+**syntax**
+
+```
+select tbl1.*, columname from tbl1 right join tbl2 on tbl1.commonfield=tbl2.commfield;
+or
+select tbl_salesman.*, depname from tbl_salesman right join tbl_department on tbl_salesman.depid=tbl_department.depid;
+or
+
+select salesid, name, address , mobile,email , depname from tbl_salesman right join tbl_department on tbl_salesman.depid=tbl_department.depid;
+
+or
+select salesid, name, address , mobile,email , depname, compname from tbl_salesman right join tbl_department on tbl_salesman.depid=tbl_department.depid right join tbl_company on tbl_salesman.compid=tbl_company.compid;
+
+``` 
+
+# full join : not supported in mysql
 
 
+# cross join 
+
+1. cross join are used to join table with cross of data 
+2. cross join return dublicate data 
+
+**examples**
+```
+select * from tbl_salesman cross join tbl_department
+```
+
+# self join:
+1. self join are used to join itself  
+**syntax**
+```sql 
+select e.empid , e.name as employee_name , m.name as manager_name from tbl_employees e 
+inner join tbl_employee m on e.manger_id = m.empid
+```
+
+# unoin join
+1. union join is combine of left join +right join
+2. this is a solution  of full join
+**syntax**
+```sql 
+select tbl_salesman.*, depname from tbl_salesman left join tbl_department on tbl_salesman.depid=tbl_department.depid;
+union
+select tbl_salesman.*, depname from tbl_salesman right join tbl_department on tbl_salesman.depid=tbl_department.depid;
+```
 # what is SQL index or indexer ?
+1. SQL index or indexer create or used to improved speed of tables
+2. SQL index is used to fast looking or search data from table
+3. SQL index is also create fast speed optimzation of table
+# types of indexer 
+1. **single indexer**
 
+  - when we create a indexer on single column that is called single indexer 
+  
+  **examples**
+  ```
+  create index tbl_products_index1 on tbl_products (pid);
+
+  ```
+2. **composit indexer** 
+  
+   
+  - when we create a indexer on more than one  columns that is called composit indexer 
+  
+  **examples**
+  ```
+  create index tbl_products_index2 on tbl_products (pid, pname, qty, price);
+
+  ```
 
 # what is SQL view  ?
+  
+1. create a SQL views for clone of a tables 
+2. create a SQL views for hide some data from some users there we create a clone of tables of view of table 
+3. create a View and when we changed in view main tables are effected 
+
+**examples**
+
+```
+create view view_tbl_customer as select * from tbl_customer;
+or
+create view view_tbl_customer as select * from tbl_customer where custid in (1,3,6);
+or 
+create view view_tbl_customer as select custid , name , password ,phone  from tbl_customer;
+or
+create view view_tbl_salesman as select * from tbl_salesman;
+```
+# what is SQL Case In or case when ?
+
+1. check a multiple case using case when 
+2. check a multiple case using case when and it is also check logic based case in tables
+3. filter logic based case data from tables used **case when**
+
+**examples**
+
+```
+select name , salary , case when salary >=75000 then 'Higher Earner'  when salary >=50000 then  'Medium Earner' else 'Lower salary' end as salary_earner from tbl_employee; 
+or
+select name , salary , case when salary >=75000 then 'Higher Earner'  when salary >=50000 then  'Medium Earner' else 'Lower salary' end as salary_earner from tbl_employee; 
+```
+
+# what is SQL windows function  ?
+1. SQL windows function is used to perform calculations across a set of table rows that are somehow related to the current row.
+
+2. SQL windows function create a default index on tables that can be stored a unique value of each row in tables
+
+# types of SQL windows function ?
+
+1. rank() over()
+2. dense_rank() over()
+3. row_number() over()
+4. ntile() over()
+5. first_value() over()
+6. last_value() over()
+7. lag() over()
+8. lead() over()
+9. sum() over()
+10. avg() over()
+11. min() over()
+12. max() over()
+13. count() over()
+
+**examples of windows function**
 
 
 # what is SQL trigger ?
 
 
 # what is SQL store procedure ?
+
 
 # what is SQL CTE ?
 
