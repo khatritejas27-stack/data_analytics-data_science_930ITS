@@ -1075,6 +1075,8 @@ select name , salary , case when salary >=75000 then 'Higher Earner'  when salar
 **examples of windows function**
 
 
+
+
 # what is SQL trigger ?
 
 
