@@ -1,0 +1,1 @@
+# Tasks 1:Write an SQL query to find the top 5 highest-rated restaurants in Koramangala that serve North Indian cuisine, using the Zomato Bangalore dataset.

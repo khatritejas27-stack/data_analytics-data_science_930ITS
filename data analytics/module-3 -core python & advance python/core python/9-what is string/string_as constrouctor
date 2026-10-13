@@ -1,0 +1,9 @@
+#string defined as construtor str()
+#string defined as construtor its mean same name of class
+#str()
+
+
+str1= str("hi om")
+print(str1)
+print(type(str1))
+

@@ -1037,6 +1037,10 @@ create view view_tbl_customer as select custid , name , password ,phone  from tb
 or
 create view view_tbl_salesman as select * from tbl_salesman;
 ```
+2. delete view table
+```sql
+drop view view_tablename ;
+```
 # what is SQL Case In or case when ?
 
 1. check a multiple case using case when 
