@@ -22,3 +22,5 @@ INSERT INTO Review  VALUES
 (9, 13, 'John Doe', 4.5, '2026-08-14'),
 (10, 14, 'Karthik Rao', 4.5, '2026-09-30');
 ```
+
+![alt text](image-2.png)

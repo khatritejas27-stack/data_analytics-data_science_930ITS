@@ -1,0 +1,101 @@
+order_id,restaurant_name,customer_name,order_amount,order_date
+ORD1001,Sushi Central,Daniel Martinez,100.04,2026-03-24
+ORD1002,BBQ Pit,Laura Wilson,18.25,2026-01-16
+ORD1003,BBQ Pit,Emily Brown,141.64,2026-03-27
+ORD1004,Pizza Palace,Laura Wilson,86.84,2026-01-26
+ORD1005,Pasta House,David Black,129.54,2026-10-09
+ORD1006,Curry Express,Michael Green,69.11,2026-04-18
+ORD1007,Sushi Central,Mary Thomas,134.19,2026-09-02
+ORD1008,Burger Shack,James Anderson,94.62,2026-04-12
+ORD1009,Pizza Palace,Robert Jackson,30.01,2026-06-25
+ORD1010,The Salad Bowl,Michael Green,114.51,2026-08-11
+ORD1011,Taco Fiesta,Sarah White,148.97,2026-05-24
+ORD1012,Green Garden,David Black,46.38,2026-10-23
+ORD1013,Wok & Roll,Alex Jones,145.41,2026-09-24
+ORD1014,Green Garden,Robert Jackson,21.32,2026-06-15
+ORD1015,Pizza Palace,Mary Thomas,124.96,2026-05-09
+ORD1016,BBQ Pit,Charles Harris,125.79,2026-07-28
+ORD1017,Wok & Roll,Jessica Taylor,95.82,2026-06-16
+ORD1018,Green Garden,Emily Brown,88.35,2026-01-28
+ORD1019,Pasta House,Patricia White,111.45,2026-04-12
+ORD1020,Pizza Palace,Alex Jones,23.37,2026-10-05
+ORD1021,The Salad Bowl,Jessica Taylor,43.14,2026-10-18
+ORD1022,Pizza Palace,Patricia White,88.08,2026-03-31
+ORD1023,Pizza Palace,Alex Jones,131.74,2026-10-06
+ORD1024,Curry Express,Michael Green,60.01,2026-05-18
+ORD1025,Burger Shack,Laura Wilson,86.82,2026-01-16
+ORD1026,Sushi Central,Robert Jackson,137.94,2026-09-07
+ORD1027,Taco Fiesta,Mary Thomas,70.83,2026-07-07
+ORD1028,Burger Shack,Mary Thomas,83.17,2026-10-26
+ORD1029,The Salad Bowl,Michael Green,38.64,2026-01-09
+ORD1030,Sushi Central,James Anderson,61.64,2026-03-24
+ORD1031,Wok & Roll,Jessica Taylor,65.57,2026-06-18
+ORD1032,Green Garden,David Black,96.64,2026-04-20
+ORD1033,Sushi Central,Patricia White,145.22,2026-08-01
+ORD1034,Pasta House,Laura Wilson,100.86,2026-09-11
+ORD1035,The Salad Bowl,Emily Brown,14.86,2026-04-03
+ORD1036,Wok & Roll,Emily Brown,75.36,2026-07-06
+ORD1037,Wok & Roll,Alex Jones,89.26,2026-05-02
+ORD1038,Taco Fiesta,Michael Green,57.06,2026-05-17
+ORD1039,Green Garden,Sarah White,49.33,2026-07-28
+ORD1040,Green Garden,Jessica Taylor,71.32,2026-03-23
+ORD1041,Curry Express,Charles Harris,129.58,2026-10-18
+ORD1042,Pizza Palace,Jane Smith,148.87,2026-04-18
+ORD1043,Pizza Palace,Robert Jackson,134.81,2026-10-13
+ORD1044,BBQ Pit,Sarah White,15.65,2026-06-21
+ORD1045,The Salad Bowl,Michael Green,123.63,2026-09-15
+ORD1046,Burger Shack,Laura Wilson,28.52,2026-01-23
+ORD1047,Pizza Palace,Mary Thomas,83.18,2026-01-08
+ORD1048,BBQ Pit,Daniel Martinez,31.06,2026-06-12
+ORD1049,Wok & Roll,Emily Brown,134.72,2026-06-25
+ORD1050,Wok & Roll,Jessica Taylor,38.65,2026-08-16
+ORD1051,Sushi Central,Robert Jackson,51.52,2026-10-23
+ORD1052,Taco Fiesta,Laura Wilson,72.84,2026-10-09
+ORD1053,Pasta House,David Black,96.95,2026-09-06
+ORD1054,Curry Express,Emily Brown,114.77,2026-08-25
+ORD1055,Green Garden,Michael Green,51.55,2026-01-20
+ORD1056,BBQ Pit,Jane Smith,22.84,2026-07-21
+ORD1057,Pizza Palace,Sarah White,34.61,2026-02-14
+ORD1058,Sushi Central,Mary Thomas,39.54,2026-02-23
+ORD1059,Taco Fiesta,Charles Harris,120.73,2026-07-06
+ORD1060,Wok & Roll,Alex Jones,11.23,2026-07-07
+ORD1061,Pasta House,David Black,147.24,2026-01-26
+ORD1062,Curry Express,Jessica Taylor,146.42,2026-08-21
+ORD1063,Green Garden,Daniel Martinez,13.92,2026-09-24
+ORD1064,BBQ Pit,Laura Wilson,36.65,2026-02-03
+ORD1065,Burger Shack,James Anderson,122.34,2026-03-24
+ORD1066,Pizza Palace,Robert Jackson,52.88,2026-08-25
+ORD1067,Sushi Central,Mary Thomas,79.45,2026-03-01
+ORD1068,Taco Fiesta,John Doe,96.43,2026-05-18
+ORD1069,Burger Shack,John Doe,39.42,2026-01-11
+ORD1070,The Salad Bowl,John Doe,132.55,2026-06-12
+ORD1071,Sushi Central,James Anderson,78.43,2026-09-02
+ORD1072,Wok & Roll,Jessica Taylor,55.42,2026-08-25
+ORD1073,Green Garden,David Black,108.92,2026-04-12
+ORD1074,Sushi Central,Patricia White,112.43,2026-10-18
+ORD1075,Pasta House,Laura Wilson,94.75,2026-01-20
+ORD1076,The Salad Bowl,Emily Brown,63.84,2026-03-05
+ORD1077,Wok & Roll,Emily Brown,121.32,2026-06-15
+ORD1078,Wok & Roll,Alex Jones,44.52,2026-09-12
+ORD1079,Taco Fiesta,Michael Green,119.52,2026-05-24
+ORD1080,Green Garden,Sarah White,87.43,2026-04-03
+ORD1081,Green Garden,Jessica Taylor,23.95,2026-06-18
+ORD1082,Curry Express,Charles Harris,104.53,2026-08-11
+ORD1083,Pizza Palace,Jane Smith,76.43,2026-07-28
+ORD1084,Pizza Palace,Robert Jackson,139.52,2026-04-12
+ORD1085,BBQ Pit,Sarah White,48.95,2026-02-14
+ORD1086,The Salad Bowl,Michael Green,67.43,2026-09-06
+ORD1087,Burger Shack,Laura Wilson,118.95,2026-10-23
+ORD1088,Pizza Palace,Mary Thomas,54.32,2026-05-24
+ORD1089,BBQ Pit,Daniel Martinez,91.24,2026-06-15
+ORD1090,Wok & Roll,Emily Brown,124.53,2026-08-21
+ORD1091,Wok & Roll,Jessica Taylor,33.45,2026-07-06
+ORD1092,Sushi Central,Robert Jackson,88.94,2026-03-24
+ORD1093,Taco Fiesta,Laura Wilson,142.12,2026-09-02
+ORD1094,Pasta House,David Black,65.43,2026-04-18
+ORD1095,Curry Express,Emily Brown,119.54,2026-01-26
+ORD1096,Green Garden,Michael Green,42.12,2026-10-18
+ORD1097,BBQ Pit,Jane Smith,131.45,2026-05-09
+ORD1098,Pizza Palace,Sarah White,77.84,2026-07-28
+ORD1099,Sushi Central,Mary Thomas,105.43,2026-06-16
+ORD1100,Taco Fiesta,Charles Harris,59.84,2026-01-28
